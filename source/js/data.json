@@ -1,0 +1,64 @@
+{
+  "cards" : [
+    {
+      "id": 0,
+      "desc" : "Сказочное заморское яство",
+      "title" : "Нямушка",
+      "fill" : "с фуа-гра",
+      "portions" : "10 порций",
+      "prize" : "мышь в подарок",
+      "weightNum" : "0,5",
+      "toWeight" : "кг",
+      "buy": "Чего сидишь? Порадуй котэ, <a href='#' class='card__buy-link'>купи.</a>",
+      "state" : {
+        "disabled": false,
+        "isMouseOut": false,
+        "isFirstClickCard": false
+      },
+      "templateStrs" : {
+        "active": "Печень утки разварная с артишоками.",
+        "disabled": "Печалька, с фуа-гра закончился."
+      }
+    },
+    {
+      "id": 1,
+      "desc": "Сказочное заморское яство",
+      "title": "Нямушка",
+      "fill": "с рыбой",
+      "portions": "40 порций",
+      "prize": "2 мыши в подарок",
+      "weightNum": "2",
+      "toWeight": "кг",
+      "buy": "Чего сидишь? Порадуй котэ, <a href='#' class='card__buy-link'>купи.</a>",
+      "state": {
+        "disabled": false,
+        "isMouseOut": false,
+        "isFirstClickCard": false
+      },
+      "templateStrs": {
+        "active": "Головы щучьи с чесноком да свежайшая сёмгушка.",
+        "disabled": "Печалька, с рыбой закончился."
+      }
+    },
+    {
+      "id": 2,
+      "desc": "Сказочное заморское яство",
+      "title": "Нямушка",
+      "fill": "с курой",
+      "portions": "100 порций",
+      "prize": "5 мышей в подарок <br> заказчик доволен",
+      "weightNum": "5",
+      "toWeight": "кг",
+      "buy": "Чего сидишь? Порадуй котэ, <a href='#' class='card__buy-link'>купи.</a>",
+      "state": {
+        "disabled": true,
+        "isMouseOut": false,
+        "isFirstClickCard": false
+      },
+      "templateStrs": {
+        "active": "Печень утки разварная с артишоками.",
+        "disabled": "Печалька, с фуа-гра закончился."
+      }
+    }
+  ]
+}
