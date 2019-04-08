@@ -9,12 +9,60 @@
 <body>
 <div class="container">
   <div class="app-request">
-    <span class="app-request__number">1</span>
-    <section class="initial-data">
-      <!-- inner data json -->
+    <div class="app-request__wrap-number">
+      <p class="app-request__title">Кредитная анкета:</p>
+      <input type="text" class="app-request__input" value="1">
+      <span class="app-request__all-request">3</span>
+    </div>
+
+    <section class="app-request__item  initial-data">
+      <h2 class="initial-data__title">Начальные данные</h2>
+      <div class="initial-data__wrap">
+        <h3 class="initial-data__field">Отделение заведения анкеты:</h3>
+        <p class="initial-data__value">г. Симферополь, ул. Героев Сталинграда 10.</p>
+      </div>
+
+      <div class="initial-data__wrap">
+        <h3 class="initial-data__field">Дата постановки анкеты на маршрут:</h3>
+        <p class="initial-data__value">08.04.2019</p>
+      </div>
+
+      <div class="initial-data__wrap">
+        <h3 class="initial-data__field">Запрошенная сумма кредита:</h3>
+        <p class="initial-data__value">300000</p>
+      </div>
+
+      <div class="initial-data__wrap">
+        <h3 class="initial-data__field">Номер кредитного договора:</h3>
+        <p class="initial-data__value">342961</p>
+      </div>
+
+      <div class="initial-data__wrap">
+        <h3 class="initial-data__field">Цель кредита:</h3>
+        <p class="initial-data__value">Потребительский. На ремонт.</p>
+      </div>
+      <button class="initial-data__btn btn" type="button">Далее</button>
     </section>
-    <section class="calculated-data">
-      
+
+    <section class="app-request__item  calculated-data">
+      <h2 class="calculated-data__title">Расчетные данные</h2>
+      <div class="calculated-data__wrap">
+        <h3 class="calculated-data__field">Время на верификацию:</h3>
+        <p class="calculated-data__value">10 минут</p>
+      </div>
+      <div class="calculated-data__wrap">
+        <h3 class="calculated-data__field">Доработка анкеты:</h3>
+        <p class="calculated-data__value">15 минут</p>
+      </div>
+      <div class="calculated-data__wrap">
+        <h3 class="calculated-data__field">Кол-во выполненных доработок:</h3>
+        <p class="calculated-data__value">4</p>
+      </div>
+      <div class="calculated-data__wrap">
+        <h3 class="calculated-data__field">Общее время работы с анкетой:</h3>
+        <p class="calculated-data__value">1 час</p>
+      </div>
+      <button class="calculated-data__btn btn" type="button">Следующая анкета</button>
     </section>
   </div>
 </div>

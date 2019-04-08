@@ -1,0 +1,42 @@
+.app-request {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-request__wrap-number {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.app-request__title {
+  width: 100%;
+  text-align: center;
+}
+
+.app-request__input {
+  border: none;
+  min-width: 30px;
+  text-align: center;
+  outline: none;
+  border-bottom: 1px solid currentColor;
+
+  &:hover {
+    border-bottom: 1px solid #00AEC7;
+  }
+
+  &:focus {
+    color: #00AEC7;
+  }
+
+}
+
+.app-request__all-request {
+  padding: 0 5px;
+
+  &::before {
+    content: '/';
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

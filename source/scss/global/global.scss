@@ -3,7 +3,23 @@
 }
 
 body {
-  min-width: 350px;
+  min-width: 320px;
   font-family: 'Roboto', Arial, sans-serif;
   padding-top: 50px;
+  color: #333F48;
+  font-weight: 500;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+  overflow: hidden;
 }
