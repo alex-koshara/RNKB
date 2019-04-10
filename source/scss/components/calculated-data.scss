@@ -15,9 +15,18 @@
 
 .calculated-data__wrap {
   padding-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
 
-  &:last-child {
-    padding-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 12px;
+    height: 3px;
+    width: 20px;
+    background: #00AEC7;
   }
 }
 
@@ -30,4 +39,8 @@
 .calculated-data__value {
   margin: 0;
   font-weight: 300;
+}
+
+.calculated-data__btn.calculated-data__btn--next {
+  margin-bottom: 20px;
 }
