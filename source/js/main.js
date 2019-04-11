@@ -1,8 +1,13 @@
 'use strict';
 
+let numberOfProfiles = null;
+const nextProfileBtn = document.querySelector('#nextProfile');
 const URL = 'js/data.json';
 const CARD_LIST = document.querySelector('.app-request__container');
-let numberOfProfiles = null;
+const profileNumInput = document.querySelector('.app-request__input');
+const initData = {
+  currentProfile: 1
+}
 
 let data = fetch(URL)
   .then(function (response) {
@@ -10,42 +15,55 @@ let data = fetch(URL)
   })
   .then(function (data) {
     renderCards(data);
-    numberOfProfiles = data.cards.length;
+    setProfilesNum(data);
+    
     setNumberProfiles(numberOfProfiles);
+    onActiveProfile(initData.currentProfile);
+
+    nextProfileBtn.addEventListener('click', onNextProfile)
+    profileNumInput.addEventListener('change', function(evt) {
+      let curretnInputValue = this.value;
+      if (curretnInputValue > 0 && curretnInputValue <= numberOfProfiles) {
+        initData.currentProfile = curretnInputValue;
+        console.log(initData.currentProfile)
+        onActiveProfile(this.value);
+      }
+    })
   })
   .catch(alert);
+
+function onNextProfile() {
+  initData.currentProfile++;
+
+  if (initData.currentProfile > numberOfProfiles) initData.currentProfile = 1;
+  
+  profileNumInput.value = initData.currentProfile;
+
+  onActiveProfile(initData.currentProfile);
+}
 
 function setNumberProfiles(numbersOfProfiles) {
   let appRequestAll = document.querySelector('.app-request__all-request');
   appRequestAll.textContent = numbersOfProfiles;
 }
 
-window.renderCardTemplate = (function () {
-  const CARD_TEMPALTE = document.querySelector('#card-template');
-  let cardElement = CARD_TEMPALTE.content.querySelector('.app-request__container');
+function setProfilesNum(num) {
+  const profilesCount = num.cards.length;
+  numberOfProfiles = profilesCount;
+}
 
-  return function (card) {
-    let newCard = cardElement.cloneNode(true);
-    let initDataWrap = newCard.querySelector('.initial-data__wraps');
-    let calcDataWrap = newCard.querySelector('.calculated-data__wraps');
-    
-    card.initFields.forEach( (field, i) => {
-      initDataWrap.innerHTML += `<div class="initial-data__wrap">
-          <h3 class="initial-data__field">${field}</h3>
-          <p class="initial-data__value">${card.initValues[i]}</p>
-        </div>`;
-    })
+function onActiveProfile(profileNum) {
+  const allProfiles = Array.from(document.querySelectorAll('.app-request__wrap'));
 
-    card.calcFields.forEach((field, i) => {
-      calcDataWrap.innerHTML += `<div class="initial-data__wrap">
-          <h3 class="initial-data__field">${field}</h3>
-          <p class="initial-data__value">${card.calcValues[i]}</p>
-        </div>`;
-    })
-
-    return newCard;
-  };
-})();
+  allProfiles.forEach((profile, i) => {
+    let currentNumProfile = profileNum - 1;
+    if(i == currentNumProfile) {
+      profile.classList.remove('not-visible');
+    } else {
+      profile.classList.add('not-visible');
+    }
+  })
+}
 
 function renderCards(data) {
   CARD_LIST.innerHTML = '';

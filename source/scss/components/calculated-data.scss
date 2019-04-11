@@ -13,6 +13,12 @@
   }
 }
 
+.calculated-data__wraps {
+    @media (min-width: $tablet) {
+      padding-bottom: 50px;
+    }
+}
+
 .calculated-data__wrap {
   padding-bottom: 20px;
   padding-left: 30px;
@@ -39,8 +45,4 @@
 .calculated-data__value {
   margin: 0;
   font-weight: 300;
-}
-
-.calculated-data__btn.calculated-data__btn--next {
-  margin-bottom: 20px;
 }

@@ -1,6 +1,10 @@
 .app-request {
-  display: flex;
-  flex-direction: column;
+  transition: padding .4s;
+  @media (min-width: $desktop) {
+    border: 2px solid #00AEC7;
+    padding: 45px 25px;
+  }
+
 }
 
 .app-request__wrap-number {
@@ -16,7 +20,7 @@
 
 .app-request__input {
   border: none;
-  min-width: 30px;
+  width: 60px;
   text-align: center;
   outline: none;
   border-bottom: 1px solid currentColor;
@@ -38,5 +42,12 @@
     content: '/';
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+.app-request__wrap {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-around;
   }
 }

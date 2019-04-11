@@ -16,32 +16,30 @@
     </div>
 
     <div class="app-request__container"></div>
+    <button class="app-request__btn btn btn--next" id="nextProfile" type="button">Следующая анкета</button>
   </div>
 </div>
 
 
 <template id="card-template" style="display: none">
-  <div class="app-request__container">
-    <section class="app-request__item  initial-data">
+  <section class="app-request__wrap">
+    <div class="app-request__item  initial-data">
       <h2 class="initial-data__title">Начальные данные</h2>
 
       <div class="initial-data__wraps"></div>
-
-      <button class="initial-data__btn btn" type="button">Далее</button>
-    </section>
+    </div>
   
-    <section class="app-request__item  calculated-data">
+    <div class="app-request__item  calculated-data">
       <h2 class="calculated-data__title">Расчетные данные</h2>
 
       <div class="calculated-data__wraps"></div>
 
-      <button class="calculated-data__btn calculated-data__btn--next btn" type="button">Следующая анкета</button>
-      <button class="calculated-data__btn calculated-data__btn--back btn" type="button">Назад</button>
-    </section>
-  </div>
+      
+    </div>
+  </section>
 </template>
 
-
+<script src='js/renderCard.js'></script>
 <script src='js/main.js'></script>
 </body>
 </html>
