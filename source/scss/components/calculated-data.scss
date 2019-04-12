@@ -1,3 +1,9 @@
+.calculated-data {
+  @media (min-width: $tablet) {
+    width: 50%;
+    padding-left: 50px;
+  }
+}
 .calculated-data__title {
   font-size: 20px;
   display: flex;
@@ -8,7 +14,7 @@
     margin-bottom: -3px;
     height: 2px;
     flex-grow: 1;
-    background: #00AEC7;
+    background: $light-blue;
     margin-left: 15px;
   }
 }
@@ -32,7 +38,7 @@
     top: 12px;
     height: 3px;
     width: 20px;
-    background: #00AEC7;
+    background: $light-blue;
   }
 }
 

@@ -1,7 +1,7 @@
 .app-request {
   transition: padding .4s;
   @media (min-width: $desktop) {
-    border: 2px solid #00AEC7;
+    border: 2px solid $light-blue;
     padding: 45px 25px;
   }
 
@@ -26,11 +26,11 @@
   border-bottom: 1px solid currentColor;
 
   &:hover {
-    border-bottom: 1px solid #00AEC7;
+    border-bottom: 1px solid $light-blue;
   }
 
   &:focus {
-    color: #00AEC7;
+    color: $light-blue;
   }
 
 }
