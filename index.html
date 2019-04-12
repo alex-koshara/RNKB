@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>RNKB</title>
+</head>
+<body>
+<div class="container">
+  <div class="app-request">
+    <div class="app-request__wrap-number">
+      <p class="app-request__title">Кредитная анкета:</p>
+      <input type="text" class="app-request__input" value="1">
+      <span class="app-request__all-request">3</span>
+    </div>
+
+    <div class="app-request__container"></div>
+    <button class="app-request__btn btn btn--next" id="nextProfile" type="button">Следующая анкета</button>
+  </div>
+</div>
+
+
+<template id="card-template" style="display: none">
+  <section class="app-request__wrap">
+    <div class="app-request__item  initial-data">
+      <h2 class="initial-data__title">Начальные данные</h2>
+
+      <div class="initial-data__wraps"></div>
+    </div>
+  
+    <div class="app-request__item  calculated-data">
+      <h2 class="calculated-data__title">Расчетные данные</h2>
+
+      <div class="calculated-data__wraps"></div>
+
+      
+    </div>
+  </section>
+</template>
+
+<script src='js/renderCard.js'></script>
+<script src='js/main.js'></script>
+</body>
+</html>
